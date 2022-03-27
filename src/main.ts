@@ -7,7 +7,7 @@ async function run(): Promise<void> {
 
     const labels = core
       .getInput('labels')
-      .split('\n')
+      .split(' ')
       .filter(l => l !== '');
     const [owner, repo] = core.getInput('repo').split('/');
     const number =
